@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Article Page</title>
+    <link rel="stylesheet" href="CSS/style.css">
+</head>
+<body>
+    <header>
+        <h1 class="logo"><a href=index.html>Feline Times</h1></a>
+        <nav>
+            <div class="hamburger">☰</div>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="article.html">Article</a></li>
+                <li><a href="article2.html">Article (2)</a></li>
+                <li><a href="gallery.html">Gallery</a></li>
+            </ul>
+        </nav>
+    </header>
+    <div class="article-header">
+        <h1 style="font-size:70px">The Internet is Down: Cat Unleashes DDoS Attack</h1>
+        <p>By: Meow Meow │ Date: February 20, 2024</p>
+    </div>
+    <!--Content section and sidebar will go here-->
+    <main class="article-content">
+        <section class="main-article">
+        <img src="Images/cathack.jpeg" class="centerimg">
+        <br>
+        <figcaption>A suspicious cat was said to have hopped on a keyboard and disrupted the entire internet.</figcaption>
+            <h2>Meow, Meow</h2>
+            <p>Aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Curabitur feugiat tortor sed consectetur iaculis. Fusce cursus lacus viverra accumsan elementum. Nulla facilisi. Nunc diam leo, molestie quis facilisis ut, bibendum quis nunc. Nullam blandit magna ex, in volutpat sem volutpat vitae. Sed posuere faucibus eros quis vulputate. Fusce euismod eros non rhoncus aliquam. Quisque at tortor consequat, scelerisque erat in, sagittis dui. Suspendisse aliquam tortor eget urna convallis, ut faucibus felis efficitur. Nulla posuere nisl aliquam euismod interdum. Praesent blandit odio at finibus rutrum. Cras lorem neque, pellentesque at ligula a, suscipit sodales nibh. Aliquam erat volutpat. Nullam accumsan porta ante quis vehicula. Curabitur commodo nisi eget elit mollis, vel aliquam purus pretium.
+            <br><br>
+            Duis nibh quam, euismod quis sodales in, auctor ut mi. Etiam ligula ligula, mattis sit amet ex non, porta blandit ex. Suspendisse eleifend ipsum eget lacus vestibulum varius. Donec nec odio lacus. Mauris condimentum ante nec massa placerat ultrices. Nullam at faucibus tortor, at feugiat elit. Praesent ut purus nec justo facilisis elementum et sed metus. Vivamus fringilla dignissim lacus id cursus.
+            <br><br>
+            Nam efficitur est id dui volutpat gravida. Vestibulum non luctus mauris. Proin id dui bibendum, porta nisl sed, condimentum sapien. Duis pulvinar massa vitae lorem ullamcorper, porttitor ullamcorper erat lacinia. Suspendisse nec massa vel odio pulvinar feugiat. Nam sollicitudin dolor at ipsum tempor iaculis. Aliquam erat volutpat. Etiam porta, nibh dignissim facilisis mollis, nulla augue accumsan orci, ut auctor eros sem vitae ex. Mauris sit amet lacinia orci. Suspendisse eget ante viverra, egestas leo nec, rutrum risus. In tortor lectus, egestas eget vulputate ut, suscipit at sapien. Suspendisse vel ornare est, vel tempor nibh.</p>
+            <br><br>
+            <img src="Images/cmpcode.jpeg" class="centerimg">
+            <br>
+            <figcaption>Generic computer code.</figcaption>
+            <br>
+            <h2>Meow?</h2>
+            <p>Fusce ullamcorper quam vel dolor luctus tincidunt. Morbi consectetur orci in lorem euismod, vitae vulputate elit mollis. Pellentesque sed ipsum ornare, efficitur orci a, mollis massa. Morbi dictum maximus luctus. Sed dignissim, ex vitae euismod elementum, magna ligula consequat ante, nec porttitor elit nisl et urna. Phasellus congue tempus tempus. Aliquam erat volutpat. Aenean ornare, magna quis consectetur ultrices, lorem eros pharetra eros, ac luctus massa sapien sit amet eros. Praesent tempor tincidunt arcu nec scelerisque. Vivamus urna libero, condimentum accumsan feugiat quis, blandit accumsan velit. Mauris fermentum dictum nibh vitae interdum.
+            <br><br></p>
+        <!--Add images or other multimedia content as needed-->
+        </section>
+        <aside class="sidebar">
+            <section class="advertisement">
+                <h3 style="font-family:system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;">ADOPT KITTENS!</h3>
+                <p style="font-size: 12px;">Find your perfect kitten companion today.</p>
+            </section>
+        </aside>
+        <!--Additional sections as needed-->
+    </main>
+    <footer>
+        <p>Contact us: news@felinetimes.com</p>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+    const hamburger = document.querySelector('.hamburger');
+    const navMenu = document.querySelector('nav ul');
+    const body = document.querySelector('body');
+
+    hamburger.addEventListener('click', function () {
+        navMenu.classList.toggle('active');
+        body.classList.toggle('nav-open');
+    });
+});
+    </script>
+</body>
+</html>

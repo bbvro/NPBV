@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Animal Newspaper Landing Page</title>
+    <link rel="stylesheet" href="CSS/style.css">
+</head>
+
+<body>
+    <header>
+        <h1 class="logo"><a href=index.html>Feline Times</h1></a>
+        <nav>
+            <div class="hamburger">☰</div>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="article.html">Article</a></li>
+                <li><a href="article2.html">Article (2)</a></li>
+                <li><a href="gallery.html">Gallery</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="spotlight">
+            <div class="article-container">
+                <div class="image-container">
+                    <img class="kitty" src="Images/kittyprez.jpg">
+                </div>
+                <div class="article-info">
+                    <h2 style="font-size: 50px;">Featured Article</h2>
+                    <h1><a href=article.html>Cat Runs for President</h1></a>
+                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit.</p>
+                </div>
+            </div>
+        </section>
+<br><br>
+        <section class="container">
+            <div class="article-container">
+                <div class="image-container">
+                    <img class="kitty" src="Images/cathack.jpeg">
+                </div>
+                <div class="article-info">
+                    <h2 style="font-size: 50px;">Latest News</h2>
+                    <h1><a href=article2.html>Cat Breaks the Internet</h1></a>
+                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="container">
+            <div class="article-container">
+                <div class="image-container">
+                    <img class="kitty" src="Images/besties.jpeg">
+                </div>
+                <div class="article-info">
+                    <h1>Two World Leaders Promise to Make Amends</h1>
+                    <p>Lorem ipsum, dolor sit amet consectetur adipisicing elit.</p>
+                </div>
+            </div>
+        </section>
+    </main>
+<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+    <footer>
+        <p>Contact us: news@felinetimes.com</p>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+    const hamburger = document.querySelector('.hamburger');
+    const navMenu = document.querySelector('nav ul');
+    const body = document.querySelector('body');
+
+    hamburger.addEventListener('click', function () {
+        navMenu.classList.toggle('active');
+        body.classList.toggle('nav-open');
+        hamburger.classList.toggle('active'); // Toggle active class on hamburger icon
+    });
+});
+    </script>
+
+</body>
+</html>

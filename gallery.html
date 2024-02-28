@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Photo Gallery</title>
+    <link rel="stylesheet" href="CSS/style.css">
+</head>
+<body>
+    <header>
+        <h1 class="logo"><a href=index.html>Feline Times</h1></a>
+        <nav>
+            <div class="hamburger">☰</div>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="article.html">Article</a></li>
+                <li><a href="article2.html">Article (2)</a></li>
+                <li><a href="gallery.html">Gallery</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main class="photo-gallery">
+        <div class="photo-container">
+        <div class="photo"><img src="Images/kittyprez.jpg" alt="photo description"></div>
+        <div class="photo"><img src="Images/kitty2.jpeg" alt="photo description"></div>
+        <div class="photo"><img src="Images/kitty3.jpeg" alt="photo description"></div>
+        <!--Repeat for each photo-->
+        </div>
+    </main>
+    <!--Navigation controls will go here-->
+    <div class="gallery-controls">
+        <button id="prev">Previous</button>
+        <button id="next">Next</button>
+    </div>
+
+    <footer>
+        <p>Contact us: news@felinetimes.com</p>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+    const hamburger = document.querySelector('.hamburger');
+    const navMenu = document.querySelector('nav ul');
+    const body = document.querySelector('body');
+
+    hamburger.addEventListener('click', function () {
+        navMenu.classList.toggle('active');
+        body.classList.toggle('nav-open');
+        hamburger.classList.toggle('active'); // Toggle active class on hamburger icon
+    });
+});
+    </script>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const photos = document.querySelectorAll('.photo');
+            const prevButton = document.getElementById('prev');
+            const nextButton = document.getElementById('next');
+            let currentIndex = 0;
+
+            function showPhoto(index) {
+                photos.forEach((photo, i) => {
+                    if (i === index) {
+                        photo.style.display = 'block';
+                    } else {
+                        photo.style.display = 'none';
+                    }
+                });
+            }
+
+            function nextPhoto() {
+                currentIndex = (currentIndex + 1) % photos.length;
+                showPhoto(currentIndex);
+            }
+
+            function prevPhoto() {
+                currentIndex = (currentIndex - 1 + photos.length) % photos.length;
+                showPhoto(currentIndex);
+            }
+
+            prevButton.addEventListener('click', prevPhoto);
+            nextButton.addEventListener('click', nextPhoto);
+
+            // Show the first photo initially
+            showPhoto(currentIndex);
+        });
+    </script>
+</body>
+</html>
